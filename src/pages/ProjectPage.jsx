@@ -37,8 +37,9 @@ function ProjectPage() {
             <nav className="nav" id="nav">
                 <div className="container nav__container">
                     <Link to="/" className="nav__logo">
-                        <span className="nav__logo-icon">A</span>
-                        Aswanth D
+                        <div className="nav__logo-wrapper">
+                            <img src="/assets/images/logos/ad.png" alt="Aswanth D" className="nav__logo-img" />
+                        </div>
                     </Link>
 
                     <ul className={`nav__links ${isMenuOpen ? 'active' : ''}`}>
@@ -59,6 +60,11 @@ function ProjectPage() {
             </nav>
 
             <main className="project-detail section">
+                {/* Background grid pattern - consistent with homepage */}
+                <div className="projects__bg-pattern" aria-hidden="true" style={{ opacity: 0.03 }}>
+                    <img src="/assets/images/grid-pattern.png" alt="" />
+                </div>
+
                 <div className="container">
                     {/* Back Link */}
                     <Link to="/#projects" className="project-detail__back fade-in">
@@ -120,8 +126,8 @@ function ProjectPage() {
 
                         {/* Gallery */}
                         <div className="project-detail__gallery fade-in">
-                            <div style={{ background: 'linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%)', aspectAspectRatio: '4/3', borderRadius: '16px' }}></div>
-                            <div style={{ background: 'linear-gradient(135deg, #e5e5e5 0%, #d5d5d5 100%)', aspectAspectRatio: '4/3', borderRadius: '16px' }}></div>
+                            <div style={{ background: 'linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%)', aspectRatio: '4/3', borderRadius: '16px' }}></div>
+                            <div style={{ background: 'linear-gradient(135deg, #e5e5e5 0%, #d5d5d5 100%)', aspectRatio: '4/3', borderRadius: '16px' }}></div>
                         </div>
 
                         {/* Solution */}

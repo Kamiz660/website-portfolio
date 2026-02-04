@@ -36,13 +36,14 @@ const HomePage = () => {
   }
 
   return (
-    <>
+    <div className="portfolio-site">
       {/* Navigation */}
       <nav className="nav" id="nav">
         <div className="container nav__container">
-          <Link to="/" className="nav__logo">
-            <span className="nav__logo-icon">A</span>
-            Aswanth D
+          <Link to="/" className="nav__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <div className="nav__logo-wrapper">
+              <img src="/assets/images/logos/ad.png" alt="Aswanth D" className="nav__logo-img" />
+            </div>
           </Link>
 
           <ul className={`nav__links ${isMenuOpen ? 'active' : ''}`}>
@@ -67,7 +68,14 @@ const HomePage = () => {
         <div className="container">
           <div className="hero__content">
             <div className="hero__card fade-in">
-              {/* Decorative illustrations can be re-added here if assets exist */}
+              {/* Decorative illustrations */}
+              <div className="hero__illustration" aria-hidden="true">
+                <img src="/assets/images/hero-shapes.png" alt="" className="hero__illustration-shapes" />
+              </div>
+              <div className="hero__design-elements" aria-hidden="true">
+                <img src="/assets/images/design-elements.png" alt="" className="hero__design-img" />
+              </div>
+
               <p className="hero__greeting">Hello, I'm</p>
               <h1 className="hero__name">Aswanth D</h1>
               <p className="hero__title">
@@ -97,6 +105,13 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Section Separator Dots */}
+      <div className="section-separator--dots" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       {/* Projects Section */}
       <section className="projects section" id="projects">
         {/* Background grid pattern */}
@@ -112,7 +127,6 @@ const HomePage = () => {
           </header>
 
           <div className="projects__grid">
-            {/* Project Cards - Re-using original structure */}
             {[
               { id: 1, title: 'Project One', tag1: 'UI/UX Design', tag2: 'Web App', bg: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' },
               { id: 2, title: 'Project Two', tag1: 'Mobile App', tag2: 'UX Research', bg: 'linear-gradient(135deg, #2d132c 0%, #801336 50%, #c72c41 100%)' },
@@ -139,6 +153,15 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Wave Separator */}
+      <div className="section-separator section-separator--to-dark" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path fill="#f5f5f5"
+            d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+          </path>
+        </svg>
+      </div>
 
       {/* Contact Section */}
       <section className="contact section" id="contact">
@@ -184,7 +207,7 @@ const HomePage = () => {
           </a>
         </div>
       </footer>
-    </>
+    </div>
   )
 }
 
