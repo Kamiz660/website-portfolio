@@ -7,7 +7,7 @@ const HomePage = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -50px 0px',
+      rootMargin: '0px 0px -100px 0px',
       threshold: 0.1
     };
 
@@ -37,9 +37,9 @@ const HomePage = () => {
 
   return (
     <div className="portfolio-site">
-      {/* Navigation */}
-      <nav className="nav" id="nav">
-        <div className="container nav__container">
+      {/* Navigation - Floating Glass Pill */}
+      <nav className="nav glass" id="nav">
+        <div className="nav__container">
           <Link to="/" className="nav__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="nav__logo-wrapper">
               <img src="/assets/images/logos/ad.png" alt="Aswanth D" className="nav__logo-img" />
@@ -47,12 +47,12 @@ const HomePage = () => {
           </Link>
 
           <ul className={`nav__links ${isMenuOpen ? 'active' : ''}`}>
-            <li><a href="#projects" className="nav__link" onClick={closeMenu}>Projects</a></li>
-            <li><a href="#contact" className="nav__link nav__link--cta" onClick={closeMenu}>Contact Me</a></li>
+            <li><a href="#projects" className="nav__link" onClick={closeMenu}>Work</a></li>
+            <li><a href="#contact" className="nav__link nav__link--cta" onClick={closeMenu}>Get in Touch</a></li>
           </ul>
 
           <button
-            className={`nav__menu-btn ${isMenuOpen ? 'active' : ''}`}
+            className={`nav__menu-btn hidden ${isMenuOpen ? 'active' : ''}`}
             aria-label="Toggle menu"
             onClick={toggleMenu}
           >
@@ -63,88 +63,74 @@ const HomePage = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Luxe Depth */}
       <section className="hero section" id="home">
+        <div className="hero__background-glow"></div>
         <div className="container">
-          <div className="hero__content">
-            <div className="hero__card fade-in">
-              {/* Decorative illustrations */}
+          <div className="hero__card glass fade-in">
+            <div className="hero__content">
+              <p className="hero__greeting">Strategic UI/UX Designer</p>
+              <h1 className="hero__name font-display">Aswanth D</h1>
+              <p className="hero__title text-gradient">
+                Crafting high-fidelity digital <span className="text-accent">experiences</span> with precision and soul.
+              </p>
+              <p className="hero__description">
+                Bridging the gap between aesthetics and functionality. I specialize in minimal designs that solve complex problems.
+              </p>
+              <div className="hero__cta">
+                <a href="#projects" className="btn btn--primary">
+                  Explore Work
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="#contact" className="btn btn--secondary">The Process</a>
+              </div>
+            </div>
+
+            <div className="hero__images">
               <div className="hero__illustration" aria-hidden="true">
                 <img src="/assets/images/hero-shapes.png" alt="" className="hero__illustration-shapes" />
               </div>
               <div className="hero__design-elements" aria-hidden="true">
                 <img src="/assets/images/design-elements.png" alt="" className="hero__design-img" />
               </div>
-
-              <p className="hero__greeting">Hello, I'm</p>
-              <h1 className="hero__name">Aswanth D</h1>
-              <p className="hero__title">
-                <span className="text-accent">UI/UX Designer</span> & Web Developer
-              </p>
-              <p className="hero__description">
-                I design and build clean, user-friendly digital experiences.
-                Focused on creating interfaces that feel intuitive and look beautiful.
-              </p>
-              <div className="hero__cta">
-                <a href="#projects" className="btn btn--primary">
-                  View My Work
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-                <a href="#contact" className="btn btn--secondary">Get in Touch</a>
-              </div>
             </div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="hero__scroll fade-in">
-          <span>Scroll</span>
-          <div className="hero__scroll-line"></div>
-        </div>
       </section>
 
-      {/* Section Separator Dots */}
-      <div className="section-separator--dots" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      {/* Projects Section */}
+      {/* Projects Section - Visual Impact */}
       <section className="projects section" id="projects">
-        {/* Background grid pattern */}
         <div className="projects__bg-pattern" aria-hidden="true">
           <img src="/assets/images/grid-pattern.png" alt="" />
         </div>
 
         <div className="container">
-          <header className="section__header">
-            <p className="section__label fade-in">Portfolio</p>
-            <h2 className="section__title fade-in">Selected Projects</h2>
-            <p className="section__subtitle fade-in">A showcase of my recent work in UI/UX design and development</p>
+          <header className="section__header fade-in">
+            <h2 className="section__title font-display">Selected <span className="text-gradient">Artifacts</span></h2>
+            <p className="section__subtitle">A deep dive into visual research and digital execution.</p>
           </header>
 
           <div className="projects__grid">
             {[
-              { id: 1, title: 'Project One', tag1: 'UI/UX Design', tag2: 'Web App', bg: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' },
-              { id: 2, title: 'Project Two', tag1: 'Mobile App', tag2: 'UX Research', bg: 'linear-gradient(135deg, #2d132c 0%, #801336 50%, #c72c41 100%)' },
-              { id: 3, title: 'Project Three', tag1: 'Branding', tag2: 'Web Design', bg: 'linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%)' },
-              { id: 4, title: 'Project Four', tag1: 'Dashboard', tag2: 'SaaS', bg: 'linear-gradient(135deg, #240046 0%, #5a189a 50%, #7b2cbf 100%)' }
-            ].map(project => (
+              { id: 1, title: 'Lumina App', tag1: 'UI Design', tag2: 'Product', bg: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)' },
+              { id: 2, title: 'Vortex UI', tag1: 'UX Design', tag2: 'System', bg: 'linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%)' },
+              { id: 3, title: 'Aura Brand', tag1: 'Branding', tag2: 'Identity', bg: 'linear-gradient(135deg, #064e3b 0%, #065f46 100%)' },
+              { id: 4, title: 'Nexus SaaS', tag1: 'Dashboard', tag2: 'SaaS', bg: 'linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%)' }
+            ].map((project, index) => (
               <Link key={project.id} to={`/projects/${project.id}`} className="project-card fade-in">
                 <div className="project-card__image" style={{ background: project.bg }}></div>
                 <div className="project-card__overlay">
-                  <span className="project-card__number">Project 0{project.id}</span>
-                  <h3 className="project-card__title">{project.title}</h3>
+                  <span className="project-card__number">Artifact 0{project.id}</span>
+                  <h3 className="project-card__title font-display">{project.title}</h3>
                   <div className="project-card__tags">
                     <span className="project-card__tag">{project.tag1}</span>
                     <span className="project-card__tag">{project.tag2}</span>
                   </div>
                 </div>
                 <div className="project-card__arrow">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="24" height="24">
                     <path d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 </div>
@@ -154,39 +140,22 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Wave Separator */}
-      <div className="section-separator section-separator--to-dark" aria-hidden="true">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-          <path fill="#f5f5f5"
-            d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-          </path>
-        </svg>
-      </div>
-
-      {/* Contact Section */}
+      {/* Contact Section - High Impact */}
       <section className="contact section" id="contact">
         <div className="container">
           <div className="contact__content">
-            <p className="contact__label fade-in">✨ Let's Connect</p>
-            <h2 className="contact__title fade-in">Have a project in mind?<br />Let's work together</h2>
-            <p className="contact__description fade-in">
-              I'm always open to discussing new projects, creative ideas,
-              or opportunities to be part of your vision.
-            </p>
+            <p className="contact__label fade-in">Collaboration</p>
+            <h2 className="contact__title font-display fade-in">Have a bold idea? <br /> Let's build it.</h2>
 
             <a href="mailto:hello@aswanthd.com" className="contact__email fade-in">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="40" height="40">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
               hello@aswanthd.com
             </a>
 
             <div className="contact__socials fade-in">
-              <a href="#" className="contact__social-link" aria-label="LinkedIn">Li</a>
-              <a href="#" className="contact__social-link" aria-label="Dribbble">Dr</a>
-              <a href="#" className="contact__social-link" aria-label="GitHub">Gh</a>
-              <a href="#" className="contact__social-link" aria-label="Twitter">Tw</a>
+              <a href="#" class="contact__social-link">LN</a>
+              <a href="#" class="contact__social-link">BE</a>
+              <a href="#" class="contact__social-link">GH</a>
+              <a href="#" class="contact__social-link">TW</a>
             </div>
           </div>
         </div>
@@ -195,13 +164,13 @@ const HomePage = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="container footer__content">
-          <p className="footer__copyright">© 2026 <span>Aswanth D</span>. Crafted with passion.</p>
+          <p className="footer__copyright">© 2026 Developed by <span>Aswanth D</span></p>
           <a href="#home" className="footer__back-to-top" onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}>
-            Back to top
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <span className="font-bold">UP</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
               <path d="M18 15l-6-6-6 6" />
             </svg>
           </a>
