@@ -77,7 +77,7 @@ function ProjectPage() {
                         <div className="project-detail__meta fade-in glass">
                             <div className="project-detail__meta-item">
                                 <span className="project-detail__meta-label">Discipline</span>
-                                <span className="project-detail__meta-value">UI/UX Designer</span>
+                                <span className="project-detail__meta-value">UI/UX & Web Development</span>
                             </div>
                             <div className="project-detail__meta-item">
                                 <span className="project-detail__meta-label">Duration</span>

@@ -69,10 +69,10 @@ const HomePage = () => {
         <div className="container">
           <div className="hero__card glass fade-in">
             <div className="hero__content">
-              <p className="hero__greeting">Strategic UI/UX Designer</p>
+              <p className="hero__greeting">UI/UX Designer & Web Developer</p>
               <h1 className="hero__name font-display">Aswanth D</h1>
               <p className="hero__title text-gradient">
-                Crafting high-fidelity digital <span className="text-accent">experiences</span> with precision and soul.
+                Crafting high-fidelity <span className="text-accent">digital experiences</span> through design and code.
               </p>
               <p className="hero__description">
                 Bridging the gap between aesthetics and functionality. I specialize in minimal designs that solve complex problems.
