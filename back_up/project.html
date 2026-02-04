@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project case study by Aswanth D - UI/UX Designer & Web Developer">
+    <title>Project Details | Aswanth D</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-icon">A</span>
+                Aswanth D
+            </a>
+
+            <ul class="nav__links">
+                <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav__link nav__link--cta">Contact Me</a></li>
+            </ul>
+
+            <button class="nav__menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <main class="project-detail section">
+        <div class="container">
+
+            <!-- Back Link -->
+            <a href="index.html#projects" class="project-detail__back fade-in">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Projects
+            </a>
+
+            <!-- Header -->
+            <header class="project-detail__header">
+                <h1 class="project-detail__title fade-in">Project Title</h1>
+
+                <div class="project-detail__meta fade-in">
+                    <div class="project-detail__meta-item">
+                        <span class="project-detail__meta-label">Role</span>
+                        <span class="project-detail__meta-value">UI/UX Designer</span>
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <span class="project-detail__meta-label">Timeline</span>
+                        <span class="project-detail__meta-value">3 Months</span>
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <span class="project-detail__meta-label">Tools</span>
+                        <span class="project-detail__meta-value">Figma, React, CSS</span>
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <span class="project-detail__meta-label">Type</span>
+                        <span class="project-detail__meta-value">Web Application</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Hero Image -->
+            <div class="project-detail__hero-image fade-in"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);"></div>
+
+            <!-- Content -->
+            <div class="project-detail__content">
+
+                <!-- Overview -->
+                <section class="project-detail__section fade-in">
+                    <h2 class="project-detail__section-title">Overview</h2>
+                    <p class="project-detail__section-text">
+                        This is a placeholder for the project overview. Describe the project's purpose,
+                        the problem it solves, and the impact it creates. Give readers a clear understanding
+                        of what this project is about and why it matters.
+                    </p>
+                </section>
+
+                <!-- Challenge -->
+                <section class="project-detail__section fade-in">
+                    <h2 class="project-detail__section-title">The Challenge</h2>
+                    <p class="project-detail__section-text">
+                        Placeholder for the challenge description. What problems did users face?
+                        What were the constraints? What goals did you set out to achieve?
+                        This section should set up the context for your design decisions.
+                    </p>
+                </section>
+
+                <!-- Gallery -->
+                <div class="project-detail__gallery fade-in">
+                    <div
+                        style="background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); aspect-ratio: 4/3; border-radius: 16px;">
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, #e5e5e5 0%, #d5d5d5 100%); aspect-ratio: 4/3; border-radius: 16px;">
+                    </div>
+                </div>
+
+                <!-- Solution -->
+                <section class="project-detail__section fade-in">
+                    <h2 class="project-detail__section-title">The Solution</h2>
+                    <p class="project-detail__section-text">
+                        Placeholder for the solution description. How did you approach the problem?
+                        What design decisions did you make and why? Walk through your process
+                        and explain how your solution addresses the challenges outlined above.
+                    </p>
+                </section>
+
+                <!-- Results -->
+                <section class="project-detail__section fade-in">
+                    <h2 class="project-detail__section-title">Results & Impact</h2>
+                    <p class="project-detail__section-text">
+                        Placeholder for results. What was the outcome of your work?
+                        Include metrics if available, user feedback, or other measures of success.
+                        This section demonstrates the real-world impact of your design work.
+                    </p>
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--color-gray-900);">
+        <div class="container footer__content">
+            <p class="footer__copyright">© 2026 <span>Aswanth D</span>. Crafted with passion.</p>
+            <a href="#" class="footer__back-to-top"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                Back to top
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 15l-6-6-6 6" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
