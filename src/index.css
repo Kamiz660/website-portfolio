@@ -245,6 +245,8 @@ button {
   height: 140%;
   width: auto;
   filter: brightness(0) invert(1);
+  mix-blend-mode: screen;
+  /* Blend away black background from invert */
 }
 
 .nav__links {
@@ -392,6 +394,8 @@ button {
   width: 100%;
   height: auto;
   animation: float 8s ease-in-out infinite;
+  mix-blend-mode: screen;
+  /* Blend out black/dark backgrounds */
 }
 
 .hero__design-elements {
@@ -401,6 +405,8 @@ button {
   width: 60%;
   z-index: 1;
   animation: float 6s ease-in-out infinite reverse;
+  mix-blend-mode: screen;
+  /* Blend out black/dark backgrounds */
 }
 
 .btn {
